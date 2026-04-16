@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Python Summer</title>
+
+    <!-- Linking CSS from Flask static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Addition Feature</h1>
+
+        <!-- ================= FORM SECTION ================= -->
+        <form method="POST" action="/">
+            <input type="number" name="number1" placeholder="First Number" required step="any">
+
+            <span>+</span>
+
+            <input type="number" name="number2" placeholder="Second Number" required step="any">
+
+            <button type="submit">Calculate</button>
+        </form>
+
+
+        <!-- ================= RESULT SECTION ================= -->
+        {% if result is not none %}
+            <div class="result-box">
+                <h2>Result: {{ result }}</h2>
+            </div>
+        {% endif %}
+
+
+        <!-- ================= HISTORY SECTION ================= -->
+        <div class="history-box">
+
+            <h2>History</h2>
+
+            {% for item in history %}
+                <p>{{ item[0] }} + {{ item[1] }} = {{ item[2] }}</p>
+            {% endfor %}
+
+            <!-- ================= CLEAR HISTORY BUTTON ================= -->
+<form method="POST" action="/clear-history">
+    <button type="submit" class="clear-btn">Clear History</button>
+</form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

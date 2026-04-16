@@ -1,0 +1,53 @@
+/* Sets the overall page layout and typography */
+body {
+    /* Defines a clean, sans-serif font stack for cross-platform compatibility */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Soft light-grey background to reduce eye strain */
+    background-color: #f4f7f6;
+    /* Flexbox properties to perfectly center the child container */
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+    /* Viewport Height ensures the body takes up the full screen height */
+    height: 100vh;
+    margin: 0;
+}
+
+/* Styles the main card-like wrapper for content */
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    /* Subtle shadow for depth and a 'lifted' UI effect */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Standardizes input field appearance */
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100px;
+}
+
+/* Defines the primary action button styling */
+button {
+    padding: 10px 20px;
+    background-color: #28a745; /* Success Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Indicates interactivity to the user */
+}
+
+/* Visual feedback for user interaction */
+button:hover {
+    background-color: #218838; /* Darkens the green on hover */
+}
+
+/* Space and color formatting for the output message */
+.result-box {
+    margin-top: 20px;
+    color: #28a745;
+}
